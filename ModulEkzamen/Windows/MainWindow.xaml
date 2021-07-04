@@ -1,0 +1,26 @@
+﻿<Window x:Class="ModulEkzamen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModulEkzamen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Name="ButtonEnter" Grid.Column="1" Grid.Row="1" Click="ButtonEnter_Click">Вход</Button>
+        <Button Name="ButtonRegister" Grid.Column="1" Grid.Row="3">Регистрация</Button>
+        <Frame Name="MFrame" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Grid.RowSpan="5"></Frame>
+    </Grid>
+</Window>

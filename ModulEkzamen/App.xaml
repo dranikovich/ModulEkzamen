@@ -1,0 +1,19 @@
+﻿<Application x:Class="ModulEkzamen.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ModulEkzamen"
+             StartupUri="Windows/MainWindow.xaml">
+    <Application.Resources>
+        <ControlTemplate x:Key="knop" TargetType="Button">
+            <Border Name="button"  Background="#04a0ff"
+                     CornerRadius="5">
+                <ContentControl Content="{TemplateBinding Content}" FontSize="14" Foreground="#ffffff" FontWeight="Medium"   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="button" Property="Background" Value="#15b1ff"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Application.Resources>
+</Application>
