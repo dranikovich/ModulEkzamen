@@ -18,23 +18,23 @@ namespace ModulEkzamen.Classes
             int b = x + c;
             return Convert.ToString(b);
         }
-        public static string Discount(int x, int v)
+        public static int Discount(int x, int v)
         {
             int j = 0;
-            int b = x%500;
-            if(v> 3)
+            int b = v%500;
+            if(x> 3)
             {
                j = 5;
             }
-            else if (v > 5)
+            else if (x > 5)
             {
                 j = 10;
             }
-            else if (v > 10)
+            else if (x > 10)
             {
                 j = 15;
             }
-            return Convert.ToString(b + j) + "%";
+            return b + j;
         }
     }
 }

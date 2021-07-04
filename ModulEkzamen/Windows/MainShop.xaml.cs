@@ -119,7 +119,9 @@ namespace ModulEkzamen.Windows
             int x = Convert.ToInt32(CartCount.Text);
             CartCount.Text = (Convert.ToInt32(CartCount.Text) + 1) + "";
             CartPrice.Text = Classes.Pricer.Price1(x, S.Цена);
-            CartPriceDiscount.Text = Classes.Pricer.Discount(Convert.ToInt32(CartCount.Text), Convert.ToInt32(CartPrice.Text));
+            int dis = Convert.ToInt32(Classes.Pricer.Discount(Convert.ToInt32(CartCount.Text), Convert.ToInt32(CartPrice.Text)));
+            CartDiscount.Text = Convert.ToString(dis);
+            CartPriceDiscount.Text = " " + (Convert.ToInt32(Classes.Pricer.Price1(x, S.Цена)) -  (Convert.ToInt32(Classes.Pricer.Price1(x, S.Цена)) / 100 * Convert.ToInt32(Classes.Pricer.Discount(Convert.ToInt32(CartCount.Text), Convert.ToInt32(CartPrice.Text))))) + "";
         }
     }
 }
