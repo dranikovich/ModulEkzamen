@@ -21,7 +21,6 @@ namespace ModulEkzamen.Windows
         {
             InitializeComponent();
             DGServises.ItemsSource = Books;
-            MessageBox.Show(CuPat);
         }
 
         private void StackPanel_Initialized_1(object sender, EventArgs e)
